@@ -17,19 +17,19 @@
     </div>
     <div id="welcomeCardContainer" class="welcome__card-container">
         <div class="the-card">
-            
-                <div id="welcomeCardBack" class="the-card__back">
-                    <video id="home-front-image" autoplay muted playsinline loop>
-                        <source id="home-front-image-source" src="~/Content/Images/21.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="glare"></div>
-                </div>
-                <div class="the-card__front">
-                    <img decoding="async" src="~/Content/Images/card-back.png" alt="Card Back" class="card-back-image">
-                    <div class="glare"></div>
-                </div>
+
+            <div id="welcomeCardBack" class="the-card__back">
+                <video id="home-front-image" autoplay muted playsinline loop>
+                    <source id="home-front-image-source" src="~/Content/Images/21.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="glare"></div>
             </div>
+            <div class="the-card__front">
+                <img decoding="async" src="~/Content/Images/card-back.png" alt="Card Back" class="card-back-image">
+                <div class="glare"></div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -44,9 +44,9 @@
             <p>
                 Tarot không chỉ là một công cụ tiền tri, mà còn là một phương tiện để khám phá bản thân, phát triển trí tuệ và tâm linh. Nó giúp chúng ta tìm ra những mẫu số chung trong cuộc sống, từ đó đưa ra những giải pháp sáng tạo và hiệu quả hơn. Với sự kết hợp giữa trực giác và lý trí, Tarot trở thành một công cụ vô cùng hữu ích trong cuộc hành trình tự khám phá và thực hiện những mục tiêu của mình.
             </p>
-          
+
         </div>
-        
+
     </div>
 
     <div class="intro-section">
@@ -106,60 +106,82 @@
         }
 
         /* Main container to hold both the text and the card */
+      
+        /* Text container */
         .content-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Ensure there's no gap between items */
+            align-items: center; /* Vertically center align text and card */
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 50px 25px;
+            padding: 50px 25px; /* Adjust as necessary, or reduce this */
         }
 
         /* Text container */
         .text-content {
-            flex: 2;
-            padding-right: 20px;
+            flex-basis: 50%;
+            padding-right: 5px; /* Reduce or remove padding to minimize the gap */
             text-align: justify;
+            margin: 0; /* Remove margins */
         }
 
         /* Card container */
         .welcome__card-container {
-            flex: 1;
+            flex-basis: 50%;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: center;
             perspective: 1000px;
-            width: 200px; /* Adjusted width to make the card smaller */
-            height: 300px; /* Adjusted height to make the card smaller */
+            margin: 0; /* Ensure no margin */
+            padding: 0; /* Remove padding */
         }
 
         .the-card {
-            position: relative;
-            width: 100%;
-            height: 100%;
+            position: center;
+            width: 250px; /* Full width of the container */
+            height: 400px; /* Full height of the container */
             transform-style: preserve-3d;
+            transform-origin: center;
             animation-name: cardRotate;
             animation-duration: 8s;
             animation-iteration-count: infinite;
             animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
         }
 
-        .the-card__front, .the-card__back {
+        .the-card__front,
+        .the-card__back {
             position: absolute;
-            width: 200px; /* Fixed width to match the front */
-            height: 300px; /* Fixed height to match the front */
+            width: 100%; /* Match the container's width */
+            height: 100%; /* Match the container's height */
             backface-visibility: hidden;
+            overflow: hidden; /* Prevent overflow */
         }
 
         .the-card__front {
-            z-index: 2;
+            z-index: 2; /* Ensure the front side is on top */
+        }
+
+        /* Make the video stretch to fill the entire front */
+        #home-front-image {
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            object-fit: cover; /* Stretch video to fill the card */
+        }
+
+        /* Make the image stretch to fill the entire back */
+        .card-back-image {
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            object-fit: cover; /* Stretch image to fill the card */
         }
 
         .the-card__back {
-            transform: rotateY(180deg);
+            transform: rotateY(180deg); /* Rotate the back to align with the front */
         }
 
-        @@keyframes cardRotate { /* Changed to @@keyframes */
+        /* Keyframe for smooth rotation */
+        @@keyframes cardRotate {
             0% {
                 transform: rotateY(0);
             }
@@ -169,8 +191,16 @@
             }
 
             100% {
-                transform: rotateY(0);
+                transform: rotateY(360deg);
             }
+        }
+
+        /* Removing any unwanted white backgrounds */
+        .welcome__card-container, .the-card__front, .the-card__back {
+            background: none; /* No background color */
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+            border: none; /* No borders */
         }
 
         .glare {
@@ -179,15 +209,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.1); /* Optional glare effect */
             pointer-events: none;
-        }
-
-        /* Card back image styling */
-        .card-back-image {
-            width: 200px; /* Fixed width to match the front */
-            height: 300px; /* Fixed height to match the front */
-            object-fit: cover; /* Ensures the image covers the area */
         }
 
         /* Styles for the heading */
