@@ -258,17 +258,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TarotWeb.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DataClasses1.designer.cs">
+    <Compile Include="Models\menu.cs" />
+    <Compile Include="Models\tarotweb.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
+      <DependentUpon>tarotweb.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\menu.cs" />
+    <Compile Include="Models\tarotweb1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tarotweb1.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -424,11 +430,6 @@
     <Content Include="Content\css\style.css.map" />
     <Content Include="Content\css\style.scss" />
     <Content Include="Content\images\galaxy.webp" />
-    <Content Include="Models\DataClasses1.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <EntityDeploy Include="Context\TarotWeb.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TarotWeb.Designer.cs</LastGenOutput>
@@ -436,9 +437,20 @@
     <Content Include="Context\TarotWeb.edmx.diagram">
       <DependentUpon>TarotWeb.edmx</DependentUpon>
     </Content>
-    <None Include="Models\DataClasses1.dbml.layout">
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </None>
+    <EntityDeploy Include="Models\tarotweb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>tarotweb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\tarotweb.edmx.diagram">
+      <DependentUpon>tarotweb.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\tarotweb1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>tarotweb1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\tarotweb1.edmx.diagram">
+      <DependentUpon>tarotweb1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -475,6 +487,7 @@
     <Content Include="Views\Menu\Test.cshtml" />
     <Content Include="Views\Menu\About.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Card\TarotOnline.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
