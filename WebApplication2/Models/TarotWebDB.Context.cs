@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Context
+namespace WebApplication2.Models
 {
     using System;
     using System.Data.Entity;
@@ -25,6 +25,8 @@ namespace WebApplication2.Context
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<cardtable> cardtables { get; set; }
         public virtual DbSet<menutable> menutables { get; set; }
+        public virtual DbSet<newstable> newstables { get; set; }
     }
 }

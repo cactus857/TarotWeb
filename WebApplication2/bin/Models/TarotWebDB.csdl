@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TAROTWEBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cardtable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="alt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="menutable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hide" Type="Boolean" />
+    <Property Name="order" Type="Int32" />
+    <Property Name="datebegin" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="newstable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hide" Type="Boolean" />
+    <Property Name="order" Type="Int32" />
+    <Property Name="datebegin" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="TAROTWEBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cardtables" EntityType="Self.cardtable" />
+    <EntitySet Name="menutables" EntityType="Self.menutable" />
+    <EntitySet Name="newstables" EntityType="Self.newstable" />
+  </EntityContainer>
+</Schema>

@@ -1,4 +1,4 @@
-﻿
+﻿@model List<WebApplication2.Models.cardtable>
 @{
     ViewBag.Title = "TarotOnline";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -369,35 +369,30 @@
     <div class="containerbottom" style="width: 100%; margin: 0 auto;">
         <div class="card-list">
 
-            <div class="card-item">
-                <img src="~/Content/images/major-arcana/the-fool.jpg" class="image" alt="Rider Waite Tarot Card">
-                <div class="card-content">
-                    <h2>The Fool</h2>
-                    <div>
-                        <h3>&#10023 Upright &#10023</h3>
-                        <p class="flavor-text">New beginnings, spontaneity, a free spirit</p>
-                        <p class="card-summary">
-                            The Fool is a sign you are on the outset of a new journey. As you undertake this new
-                            opportunity, The Fool
-                            encourages you to throw caution to the wind and prepare to embrace the unknown. This is about taking a leap
-                            of faith for personal growth, development and adventure.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>&#10023 Reversed &#10023</h3>
-                        <p class="flavor-text">Hesitation, recklessness, risk-taking</p>
-                        <p class="card-summary">
-                            The Fool reversed suggests something is holding you back and you are preventing
-                            yourself from moving
-                            forward on an opportunity. You may fear the unknown, as a result you have come to an impasse. You may be
-                            waiting on better timing, but balance this out with knowing this is a sign to take a step forward even if
-                            you are
-                            unsure of exactly what will happen next.
-                        </p>
+            @foreach (var item in Model)
+            {
+                <div class="card-item">
+                    <img src="~/Content/images/major-arcana/@item.link" class="image" alt="@item.alt">
+                    <div class="card-content">
+                        <h2>@item.name</h2>
+                        <div>
+                            <h3>&#10023 Upright &#10023</h3>
+                            <p class="flavor-text">@item.descripsion_u</p>
+                            <p class="card-summary">
+                                @item.detail_u
+                            </p>
+                        </div>
+                        <div>
+                            <h3>&#10023 Reversed &#10023</h3>
+                            <p class=">@item.descripsion_r</p>
+                            <p class="card-summary">
+                                @item.detail_r
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-item">
+            }
+            <!--<div class="card-item">
                 <img src="~/Content/images/major-arcana/the-magician.jpg" class="image" alt="Rider Waite Tarot Card">
                 <div class="card-content">
                     <h2>The Magician</h2>
@@ -957,7 +952,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <!-- ! CUPS  -->
         <section id="cups">

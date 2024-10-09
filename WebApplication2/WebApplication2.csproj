@@ -240,40 +240,36 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Context\menutable.cs">
-      <DependentUpon>TarotWeb.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\TarotWeb.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TarotWeb.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\TarotWeb.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TarotWeb.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\TarotWeb.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TarotWeb.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\CardController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\menu.cs" />
-    <Compile Include="Models\tarotweb.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tarotweb.edmx</DependentUpon>
+    <Compile Include="Models\cardtable.cs">
+      <DependentUpon>TarotWebDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\tarotweb1.Designer.cs">
+    <Compile Include="Models\menutable.cs">
+      <DependentUpon>TarotWebDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\newstable.cs">
+      <DependentUpon>TarotWebDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TarotWebDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>tarotweb1.edmx</DependentUpon>
+      <DependentUpon>TarotWebDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TarotWebDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TarotWebDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TarotWebDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TarotWebDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -408,19 +404,19 @@
     <Content Include="Content\images\wands\two-of-wands.jpg" />
     <Content Include="Content\js\script.js" />
     <Content Include="Content\js\scriptboitarot.js" />
-    <Content Include="Context\TarotWeb.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TarotWeb.edmx</DependentUpon>
-      <LastGenOutput>TarotWeb.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Context\TarotWeb.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TarotWeb.edmx</DependentUpon>
-      <LastGenOutput>TarotWeb.cs</LastGenOutput>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\TarotWebDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TarotWebDB.edmx</DependentUpon>
+      <LastGenOutput>TarotWebDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\TarotWebDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TarotWebDB.edmx</DependentUpon>
+      <LastGenOutput>TarotWebDB.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -430,26 +426,12 @@
     <Content Include="Content\css\style.css.map" />
     <Content Include="Content\css\style.scss" />
     <Content Include="Content\images\galaxy.webp" />
-    <EntityDeploy Include="Context\TarotWeb.edmx">
+    <EntityDeploy Include="Models\TarotWebDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TarotWeb.Designer.cs</LastGenOutput>
+      <LastGenOutput>TarotWebDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Context\TarotWeb.edmx.diagram">
-      <DependentUpon>TarotWeb.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="Models\tarotweb.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>tarotweb.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\tarotweb.edmx.diagram">
-      <DependentUpon>tarotweb.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="Models\tarotweb1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>tarotweb1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\tarotweb1.edmx.diagram">
-      <DependentUpon>tarotweb1.edmx</DependentUpon>
+    <Content Include="Models\TarotWebDB.edmx.diagram">
+      <DependentUpon>TarotWebDB.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
@@ -490,7 +472,9 @@
     <Content Include="Views\Card\TarotOnline.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Context\" />
     <Folder Include="Data\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

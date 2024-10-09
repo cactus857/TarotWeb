@@ -7,12 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Context
+namespace WebApplication2.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class menutable
+    public partial class newstable
     {
         public int id { get; set; }
         public string name { get; set; }

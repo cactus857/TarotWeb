@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TAROTWEBModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="TAROTWEBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="cardtable">
           <Key>
             <PropertyRef Name="id" />
@@ -46,7 +46,7 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
           <Property Name="order" Type="int" />
           <Property Name="datebegin" Type="smalldatetime" />
         </EntityType>
-        <EntityContainer Name="TAROTWEBModel2StoreContainer">
+        <EntityContainer Name="TAROTWEBModelStoreContainer">
           <EntitySet Name="cardtable" EntityType="Self.cardtable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="menutable" EntityType="Self.menutable" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -75,7 +75,7 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="TAROTWEBModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="TAROTWEBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="cardtable">
           <Key>
             <PropertyRef Name="id" />
@@ -99,7 +99,7 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
           <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="hide" Type="Boolean" />
           <Property Name="order" Type="Int32" />
-          <Property Name="datebegin" Type="DateTime" />
+          <Property Name="datebegin" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="newstable">
           <Key>
@@ -111,7 +111,7 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
           <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="hide" Type="Boolean" />
           <Property Name="order" Type="Int32" />
-          <Property Name="datebegin" Type="DateTime" />
+          <Property Name="datebegin" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityContainer Name="TAROTWEBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="cardtables" EntityType="Self.cardtable" />
@@ -123,9 +123,9 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TAROTWEBModel2StoreContainer" CdmEntityContainer="TAROTWEBEntities">
+        <EntityContainerMapping StorageEntityContainer="TAROTWEBModelStoreContainer" CdmEntityContainer="TAROTWEBEntities">
           <EntitySetMapping Name="cardtables">
-            <EntityTypeMapping TypeName="TAROTWEBModel2.cardtable">
+            <EntityTypeMapping TypeName="TAROTWEBModel.cardtable">
               <MappingFragment StoreEntitySet="cardtable">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -139,7 +139,7 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="menutables">
-            <EntityTypeMapping TypeName="TAROTWEBModel2.menutable">
+            <EntityTypeMapping TypeName="TAROTWEBModel.menutable">
               <MappingFragment StoreEntitySet="menutable">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -152,7 +152,7 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="newstables">
-            <EntityTypeMapping TypeName="TAROTWEBModel2.newstable">
+            <EntityTypeMapping TypeName="TAROTWEBModel.newstable">
               <MappingFragment StoreEntitySet="newstable">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -172,7 +172,7 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <Connection>
       <DesignerInfoPropertySet>
-        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="CopyToOutputDirectory" />
       </DesignerInfoPropertySet>
     </Connection>
     <Options>
@@ -181,6 +181,7 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

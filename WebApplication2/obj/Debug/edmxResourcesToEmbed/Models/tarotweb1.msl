@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TAROTWEBModel2StoreContainer" CdmEntityContainer="TAROTWEBEntities">
+    <EntitySetMapping Name="cardtables">
+      <EntityTypeMapping TypeName="TAROTWEBModel2.cardtable">
+        <MappingFragment StoreEntitySet="cardtable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="alt" ColumnName="alt" />
+          <ScalarProperty Name="descripsion_u" ColumnName="descripsion_u" />
+          <ScalarProperty Name="descripsion_r" ColumnName="descripsion_r" />
+          <ScalarProperty Name="detail_u" ColumnName="detail_u" />
+          <ScalarProperty Name="detail_r" ColumnName="detail_r" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="menutables">
+      <EntityTypeMapping TypeName="TAROTWEBModel2.menutable">
+        <MappingFragment StoreEntitySet="menutable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="meta" ColumnName="meta" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="datebegin" ColumnName="datebegin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="newstables">
+      <EntityTypeMapping TypeName="TAROTWEBModel2.newstable">
+        <MappingFragment StoreEntitySet="newstable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="meta" ColumnName="meta" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="datebegin" ColumnName="datebegin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
