@@ -10,12 +10,16 @@ namespace WebApplication2.Controllers
     public class CardController : Controller
     {
         TAROTWEBEntities _db= new TAROTWEBEntities();
+        CardsModel cards= new CardsModel();
         // GET: Card
         public ActionResult TarotOnline()
         {
-            var v= from t in _db.cardtables
-                   select t;
-            return View(v.ToList());
+            cards.cardtables= _db.cardtables.ToList();
+            cards.cardtables_cups= _db.cardtable_cups.ToList();
+            cards.cardtables_swords = _db.cardtable_swords.ToList();
+            cards.cardtables_pentacles = _db.cardtable_pentacles.ToList();
+            cards.cardtables_wands = _db.cardtable_wands.ToList();
+            return View(cards);
         }
 
     }

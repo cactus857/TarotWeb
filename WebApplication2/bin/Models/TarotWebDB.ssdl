@@ -13,6 +13,58 @@
     <Property Name="detail_u" Type="nvarchar(max)" />
     <Property Name="detail_r" Type="nvarchar(max)" />
   </EntityType>
+  <EntityType Name="cardtable_cups">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="link" Type="nvarchar" MaxLength="200" />
+    <Property Name="alt" Type="nvarchar" MaxLength="200" />
+    <Property Name="descripsion_u" Type="nvarchar(max)" />
+    <Property Name="descripsion_r" Type="nvarchar(max)" />
+    <Property Name="detail_u" Type="nvarchar(max)" />
+    <Property Name="detail_r" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="cardtable_pentacles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="link" Type="nvarchar" MaxLength="200" />
+    <Property Name="alt" Type="nvarchar" MaxLength="200" />
+    <Property Name="descripsion_u" Type="nvarchar(max)" />
+    <Property Name="descripsion_r" Type="nvarchar(max)" />
+    <Property Name="detail_u" Type="nvarchar(max)" />
+    <Property Name="detail_r" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="cardtable_swords">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="link" Type="nvarchar" MaxLength="200" />
+    <Property Name="alt" Type="nvarchar" MaxLength="200" />
+    <Property Name="descripsion_u" Type="nvarchar(max)" />
+    <Property Name="descripsion_r" Type="nvarchar(max)" />
+    <Property Name="detail_u" Type="nvarchar(max)" />
+    <Property Name="detail_r" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="cardtable_wands">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="link" Type="nvarchar" MaxLength="200" />
+    <Property Name="alt" Type="nvarchar" MaxLength="200" />
+    <Property Name="descripsion_u" Type="nvarchar(max)" />
+    <Property Name="descripsion_r" Type="nvarchar(max)" />
+    <Property Name="detail_u" Type="nvarchar(max)" />
+    <Property Name="detail_r" Type="nvarchar(max)" />
+  </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'TAROTWEB.dbo.menutable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="menutable">
@@ -43,6 +95,10 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
   </EntityType>
   <EntityContainer Name="TAROTWEBModelStoreContainer">
     <EntitySet Name="cardtable" EntityType="Self.cardtable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cardtable_cups" EntityType="Self.cardtable_cups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cardtable_pentacles" EntityType="Self.cardtable_pentacles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cardtable_swords" EntityType="Self.cardtable_swords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cardtable_wands" EntityType="Self.cardtable_wands" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="menutable" EntityType="Self.menutable" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [menutable].[id] AS [id], 

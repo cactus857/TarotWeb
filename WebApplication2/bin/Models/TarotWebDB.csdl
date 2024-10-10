@@ -41,5 +41,61 @@
     <EntitySet Name="cardtables" EntityType="Self.cardtable" />
     <EntitySet Name="menutables" EntityType="Self.menutable" />
     <EntitySet Name="newstables" EntityType="Self.newstable" />
+    <EntitySet Name="cardtable_cups" EntityType="TAROTWEBModel.cardtable_cups" />
+    <EntitySet Name="cardtable_swords" EntityType="TAROTWEBModel.cardtable_swords" />
+    <EntitySet Name="cardtable_pentacles" EntityType="TAROTWEBModel.cardtable_pentacles" />
+    <EntitySet Name="cardtable_wands" EntityType="TAROTWEBModel.cardtable_wands" />
   </EntityContainer>
+  <EntityType Name="cardtable_cups">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="alt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cardtable_swords">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="alt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cardtable_pentacles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="alt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cardtable_wands">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="alt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

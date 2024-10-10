@@ -41,5 +41,61 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="cardtable_cups">
+      <EntityTypeMapping TypeName="TAROTWEBModel.cardtable_cups">
+        <MappingFragment StoreEntitySet="cardtable_cups">
+          <ScalarProperty Name="detail_r" ColumnName="detail_r" />
+          <ScalarProperty Name="detail_u" ColumnName="detail_u" />
+          <ScalarProperty Name="descripsion_r" ColumnName="descripsion_r" />
+          <ScalarProperty Name="descripsion_u" ColumnName="descripsion_u" />
+          <ScalarProperty Name="alt" ColumnName="alt" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cardtable_swords">
+      <EntityTypeMapping TypeName="TAROTWEBModel.cardtable_swords">
+        <MappingFragment StoreEntitySet="cardtable_swords">
+          <ScalarProperty Name="detail_r" ColumnName="detail_r" />
+          <ScalarProperty Name="detail_u" ColumnName="detail_u" />
+          <ScalarProperty Name="descripsion_r" ColumnName="descripsion_r" />
+          <ScalarProperty Name="descripsion_u" ColumnName="descripsion_u" />
+          <ScalarProperty Name="alt" ColumnName="alt" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cardtable_pentacles">
+      <EntityTypeMapping TypeName="TAROTWEBModel.cardtable_pentacles">
+        <MappingFragment StoreEntitySet="cardtable_pentacles">
+          <ScalarProperty Name="detail_r" ColumnName="detail_r" />
+          <ScalarProperty Name="detail_u" ColumnName="detail_u" />
+          <ScalarProperty Name="descripsion_r" ColumnName="descripsion_r" />
+          <ScalarProperty Name="descripsion_u" ColumnName="descripsion_u" />
+          <ScalarProperty Name="alt" ColumnName="alt" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cardtable_wands">
+      <EntityTypeMapping TypeName="TAROTWEBModel.cardtable_wands">
+        <MappingFragment StoreEntitySet="cardtable_wands">
+          <ScalarProperty Name="detail_r" ColumnName="detail_r" />
+          <ScalarProperty Name="detail_u" ColumnName="detail_u" />
+          <ScalarProperty Name="descripsion_r" ColumnName="descripsion_r" />
+          <ScalarProperty Name="descripsion_u" ColumnName="descripsion_u" />
+          <ScalarProperty Name="alt" ColumnName="alt" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

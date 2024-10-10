@@ -247,7 +247,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CardsModel.cs" />
     <Compile Include="Models\cardtable.cs">
+      <DependentUpon>TarotWebDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cardtable_cups.cs">
+      <DependentUpon>TarotWebDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cardtable_pentacles.cs">
+      <DependentUpon>TarotWebDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cardtable_swords.cs">
+      <DependentUpon>TarotWebDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cardtable_wands.cs">
       <DependentUpon>TarotWebDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\menutable.cs">
