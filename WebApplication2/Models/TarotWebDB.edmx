@@ -98,12 +98,29 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
           <Property Name="order" Type="int" />
           <Property Name="datebegin" Type="smalldatetime" />
         </EntityType>
+        <EntityType Name="readertable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="position" Type="nvarchar" MaxLength="100" />
+          <Property Name="link" Type="nvarchar" MaxLength="200" />
+          <Property Name="img" Type="nvarchar" MaxLength="200" />
+          <Property Name="address" Type="nvarchar" MaxLength="200" />
+          <Property Name="phone" Type="varchar" MaxLength="20" />
+          <Property Name="detail_1" Type="nvarchar(max)" />
+          <Property Name="detail_2" Type="nvarchar(max)" />
+          <Property Name="detail_3" Type="nvarchar(max)" />
+          <Property Name="detail_4" Type="nvarchar(max)" />
+        </EntityType>
         <EntityContainer Name="TAROTWEBModelStoreContainer">
           <EntitySet Name="cardtable" EntityType="Self.cardtable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="cardtable_cups" EntityType="Self.cardtable_cups" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="cardtable_pentacles" EntityType="Self.cardtable_pentacles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="cardtable_swords" EntityType="Self.cardtable_swords" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="cardtable_wands" EntityType="Self.cardtable_wands" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="readertable" EntityType="Self.readertable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="menutable" EntityType="Self.menutable" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [menutable].[id] AS [id], 
@@ -176,6 +193,7 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
           <EntitySet Name="cardtable_swords" EntityType="TAROTWEBModel.cardtable_swords" />
           <EntitySet Name="cardtable_pentacles" EntityType="TAROTWEBModel.cardtable_pentacles" />
           <EntitySet Name="cardtable_wands" EntityType="TAROTWEBModel.cardtable_wands" />
+          <EntitySet Name="readertables" EntityType="TAROTWEBModel.readertable" />
         </EntityContainer>
         <EntityType Name="cardtable_cups">
           <Key>
@@ -228,6 +246,22 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
           <Property Name="descripsion_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="detail_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="detail_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="readertable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="position" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="detail_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="detail_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="detail_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="detail_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="img" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -326,6 +360,23 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
                 <ScalarProperty Name="descripsion_u" ColumnName="descripsion_u" />
                 <ScalarProperty Name="alt" ColumnName="alt" />
                 <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="readertables">
+            <EntityTypeMapping TypeName="TAROTWEBModel.readertable">
+              <MappingFragment StoreEntitySet="readertable">
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="detail_4" ColumnName="detail_4" />
+                <ScalarProperty Name="detail_3" ColumnName="detail_3" />
+                <ScalarProperty Name="detail_2" ColumnName="detail_2" />
+                <ScalarProperty Name="detail_1" ColumnName="detail_1" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="position" ColumnName="position" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>

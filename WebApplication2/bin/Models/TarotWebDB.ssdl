@@ -93,12 +93,29 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
     <Property Name="order" Type="int" />
     <Property Name="datebegin" Type="smalldatetime" />
   </EntityType>
+  <EntityType Name="readertable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="position" Type="nvarchar" MaxLength="100" />
+    <Property Name="link" Type="nvarchar" MaxLength="200" />
+    <Property Name="img" Type="nvarchar" MaxLength="200" />
+    <Property Name="address" Type="nvarchar" MaxLength="200" />
+    <Property Name="phone" Type="varchar" MaxLength="20" />
+    <Property Name="detail_1" Type="nvarchar(max)" />
+    <Property Name="detail_2" Type="nvarchar(max)" />
+    <Property Name="detail_3" Type="nvarchar(max)" />
+    <Property Name="detail_4" Type="nvarchar(max)" />
+  </EntityType>
   <EntityContainer Name="TAROTWEBModelStoreContainer">
     <EntitySet Name="cardtable" EntityType="Self.cardtable" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="cardtable_cups" EntityType="Self.cardtable_cups" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="cardtable_pentacles" EntityType="Self.cardtable_pentacles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="cardtable_swords" EntityType="Self.cardtable_swords" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="cardtable_wands" EntityType="Self.cardtable_wands" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="readertable" EntityType="Self.readertable" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="menutable" EntityType="Self.menutable" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [menutable].[id] AS [id], 

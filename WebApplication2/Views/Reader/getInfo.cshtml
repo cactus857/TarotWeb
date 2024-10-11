@@ -1,0 +1,83 @@
+﻿@model  WebApplication2.Models.readertable
+@{
+    ViewBag.Title = "getInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="about-container">
+    <h1 style="text-align:center">Chuyên gia @Model.name </h1>
+    <div class="tarot-container" style="display: flex; align-items: flex-start;">
+        <img src="~/Content/images/@Model.img" alt="Hình ảnh Tarot" class="tarot-image" style=" width: 150px;  height: 150px; border-radius: 50%; object-fit: cover;  margin-right: 15px; ">
+        <div class="tarot-text">
+            <p>.</p>
+            <h3 style="color:white">@Model.name</h3>
+            <p>@Model.detail_1</p>
+
+        </div>
+    </div>
+    <a href="@Model.link">
+        <h2>Liên hệ</h2>
+    </a>
+    <p>@Model.detail_2</p>
+
+    <h2>Chuyên môn trong lĩnh vực bói bài Tarot</h2>
+    <p>@Model.detail_3</p>
+   
+    <h2>Thông Tin Liên Hệ</h2>
+    <p>@Model.detail_4</p>
+    <ul>
+        <li>Xem bói trực tiếp cùng chuyên gia tại:</li>
+        <li>@Model.link</li>
+        <li>@Model.address</li>
+    </ul>
+</div>
+
+@section Styles {
+    <style>
+        body {
+            background-color: #221831; /* Set background color for the page */
+            color: #f9f9f9; /* Set default text color to light */
+            font-family: Arial, sans-serif; /* Use a legible font */
+        }
+
+        .about-container {
+            max-width: 70%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Box shadow */
+        }
+
+            .about-container h1,
+            .about-container h2 {
+                color: #EC4400; /* Set headings color */
+            }
+
+            .about-container p,
+            .about-container ul {
+                color: #f9f9f9; /* Ensure paragraphs and lists are light */
+                line-height: 1.6; /* Increase line height for readability */
+            }
+
+            .about-container ul {
+                list-style: none; /* Remove default list styling */
+                padding: 0; /* Remove padding */
+                margin: 0; /* Remove margin */
+            }
+
+            .about-container li {
+                margin-bottom: 10px; /* Add spacing between list items */
+            }
+
+            .about-container a {
+                text-decoration: none;
+                color: #f29f05; /* Color for links */
+            }
+
+                .about-container a:hover {
+                    color: #d98804; /* Darker color on hover */
+                }
+    </style>
+}
+

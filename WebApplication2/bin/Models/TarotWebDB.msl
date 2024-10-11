@@ -97,5 +97,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="readertables">
+      <EntityTypeMapping TypeName="TAROTWEBModel.readertable">
+        <MappingFragment StoreEntitySet="readertable">
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="detail_4" ColumnName="detail_4" />
+          <ScalarProperty Name="detail_3" ColumnName="detail_3" />
+          <ScalarProperty Name="detail_2" ColumnName="detail_2" />
+          <ScalarProperty Name="detail_1" ColumnName="detail_1" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

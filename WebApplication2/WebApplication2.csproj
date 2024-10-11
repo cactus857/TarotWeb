@@ -244,6 +244,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\ReaderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -267,6 +268,9 @@
       <DependentUpon>TarotWebDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\newstable.cs">
+      <DependentUpon>TarotWebDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\readertable.cs">
       <DependentUpon>TarotWebDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TarotWebDB.Context.cs">
@@ -475,14 +479,14 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Menu\getMenu.cshtml" />
-    <Content Include="Views\Menu\Readers.cshtml" />
-    <Content Include="Views\Menu\TarotOnline.cshtml" />
     <Content Include="Views\Menu\Contact.cshtml" />
     <Content Include="Views\Menu\InfoReader.cshtml" />
     <Content Include="Views\Menu\Test.cshtml" />
     <Content Include="Views\Menu\About.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
     <Content Include="Views\Card\TarotOnline.cshtml" />
+    <Content Include="Views\Reader\getInfo.cshtml" />
+    <Content Include="Views\Reader\Readers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Context\" />
