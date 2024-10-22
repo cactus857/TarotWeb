@@ -52,6 +52,17 @@
     <Property Name="detail_u" Type="nvarchar(max)" />
     <Property Name="detail_r" Type="nvarchar(max)" />
   </EntityType>
+  <EntityType Name="cardtable_use">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="link" Type="nvarchar" MaxLength="200" />
+    <Property Name="situation" Type="nvarchar(max)" />
+    <Property Name="obstacle" Type="nvarchar(max)" />
+    <Property Name="advice" Type="nvarchar(max)" />
+  </EntityType>
   <EntityType Name="cardtable_wands">
     <Key>
       <PropertyRef Name="id" />
@@ -114,6 +125,7 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
     <EntitySet Name="cardtable_cups" EntityType="Self.cardtable_cups" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="cardtable_pentacles" EntityType="Self.cardtable_pentacles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="cardtable_swords" EntityType="Self.cardtable_swords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cardtable_use" EntityType="Self.cardtable_use" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="cardtable_wands" EntityType="Self.cardtable_wands" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="readertable" EntityType="Self.readertable" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="menutable" EntityType="Self.menutable" store:Type="Tables" store:Schema="dbo">

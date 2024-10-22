@@ -114,5 +114,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="cardtable_use">
+      <EntityTypeMapping TypeName="TAROTWEBModel.cardtable_use">
+        <MappingFragment StoreEntitySet="cardtable_use">
+          <ScalarProperty Name="advice" ColumnName="advice" />
+          <ScalarProperty Name="obstacle" ColumnName="obstacle" />
+          <ScalarProperty Name="situation" ColumnName="situation" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

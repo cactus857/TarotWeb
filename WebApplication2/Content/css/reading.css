@@ -62,7 +62,13 @@ b {
     cursor: auto;
     z-index: 2;
     padding: 50px;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    .reading {
+        flex-direction: column; 
+    }
 }
 
 .content {
@@ -71,6 +77,8 @@ b {
     gap: 25px;
     margin: 25px;
     cursor: auto;
+    align-items: center;
+    flex-direction: column;
 }
 
 .description h2 {
@@ -88,6 +96,6 @@ b {
 }
 
 .front {
-    height: 250px;
+
 }
 

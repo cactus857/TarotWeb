@@ -31,17 +31,33 @@
                                 @item.position
                             </h6>
                             <div class="btn-box">
-                                    @Html.ActionLink("Xem thêm", "GetInfo", new { id = @item.id })
+                                @Html.ActionLink("Xem thêm", "GetInfo", new { id = @item.id })
                             </div>
                         </div>
                     </div>
                 </div>
             }
-        <div class="btn-box">
-            <a href="">
-                View All
-            </a>
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 col-sm-6 mx-auto ">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="~/Content/images/@item.img" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                @item.name
+                            </h5>
+                            <h6 class="">
+                                @item.position
+                            </h6>
+                            <div class="btn-box">
+                                @Html.ActionLink("Xem thêm", "GetInfo", new { id = @item.id })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
-    </div>
 </section>
 

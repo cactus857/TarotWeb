@@ -261,6 +261,9 @@
     <Compile Include="Models\cardtable_swords.cs">
       <DependentUpon>TarotWebDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\cardtable_use.cs">
+      <DependentUpon>TarotWebDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\cardtable_wands.cs">
       <DependentUpon>TarotWebDB.tt</DependentUpon>
     </Compile>

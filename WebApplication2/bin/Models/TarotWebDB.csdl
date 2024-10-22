@@ -46,6 +46,7 @@
     <EntitySet Name="cardtable_pentacles" EntityType="TAROTWEBModel.cardtable_pentacles" />
     <EntitySet Name="cardtable_wands" EntityType="TAROTWEBModel.cardtable_wands" />
     <EntitySet Name="readertables" EntityType="TAROTWEBModel.readertable" />
+    <EntitySet Name="cardtable_use" EntityType="TAROTWEBModel.cardtable_use" />
   </EntityContainer>
   <EntityType Name="cardtable_cups">
     <Key>
@@ -114,5 +115,16 @@
     <Property Name="detail_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="detail_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="img" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cardtable_use">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="situation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="obstacle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="advice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>
