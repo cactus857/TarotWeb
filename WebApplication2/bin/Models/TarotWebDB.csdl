@@ -25,28 +25,16 @@
     <Property Name="order" Type="Int32" />
     <Property Name="datebegin" Type="DateTime" Precision="0" />
   </EntityType>
-  <EntityType Name="newstable">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="hide" Type="Boolean" />
-    <Property Name="order" Type="Int32" />
-    <Property Name="datebegin" Type="DateTime" Precision="0" />
-  </EntityType>
   <EntityContainer Name="TAROTWEBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="cardtables" EntityType="Self.cardtable" />
     <EntitySet Name="menutables" EntityType="Self.menutable" />
-    <EntitySet Name="newstables" EntityType="Self.newstable" />
     <EntitySet Name="cardtable_cups" EntityType="TAROTWEBModel.cardtable_cups" />
     <EntitySet Name="cardtable_swords" EntityType="TAROTWEBModel.cardtable_swords" />
     <EntitySet Name="cardtable_pentacles" EntityType="TAROTWEBModel.cardtable_pentacles" />
     <EntitySet Name="cardtable_wands" EntityType="TAROTWEBModel.cardtable_wands" />
     <EntitySet Name="readertables" EntityType="TAROTWEBModel.readertable" />
     <EntitySet Name="cardtable_use" EntityType="TAROTWEBModel.cardtable_use" />
+    <EntitySet Name="newstables" EntityType="TAROTWEBModel.newstable" />
   </EntityContainer>
   <EntityType Name="cardtable_cups">
     <Key>
@@ -126,5 +114,16 @@
     <Property Name="situation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="obstacle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="advice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="newstable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ImageLink" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Summary" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
 </Schema>

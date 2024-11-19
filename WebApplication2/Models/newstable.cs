@@ -14,12 +14,11 @@ namespace WebApplication2.Models
     
     public partial class newstable
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string link { get; set; }
-        public string meta { get; set; }
-        public Nullable<bool> hide { get; set; }
-        public Nullable<int> order { get; set; }
-        public Nullable<System.DateTime> datebegin { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string ImageLink { get; set; }
+        public string Summary { get; set; }
+        public string Content { get; set; }
+        public System.DateTime Date { get; set; }
     }
 }

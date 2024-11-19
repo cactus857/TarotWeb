@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\nguye\Documents\dh4year\ASP NET\tarotwebv3\TarotWeb\WebApplication2\Models\TarotWebDB.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\HP\source\repos\TarotWeb\WebApplication2\Models\TarotWebDB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

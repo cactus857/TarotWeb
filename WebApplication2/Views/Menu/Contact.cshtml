@@ -1,319 +1,236 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Contact";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="content-container">
-    <div class="about-container">
-        <h1 style="text-align:center">Thông Tin Liên Hệ  </h1>
-        <div class="tarot-container" style="display: flex; align-items: flex-start;">
-            <div class="tarot-text">
-                <h3 style="color:white"></h3>
-                <p>Mọi ý kiến đóng góp, bạn có thể liên hệ với chúng tôi qua:</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #1A1A1A;
+            color: #E8E1EF;
+            font-family: Arial, sans-serif;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231A1A1A"/><circle cx="50" cy="50" r="1" fill="%23E8C5B0" opacity="0.2"/></svg>');
+            background-size: 30px 30px;
+        }
 
-            </div>
-        </div>
-        <p>  </p>
-        <ul>
-            <li>Địa chỉ: 180 Nguyễn văn Linh, Thạc Gián, Thanh Khê, Đà Nẵng</li>
-            <li>Email: boitarotvn@gmail.com</li>
-            <li>Số điện thoại: 0898 86 86 28</li>
-        </ul>
-        <p>  </p>
-        <div class="tarot-container" style="display: flex; align-items: flex-start;">
-            <div class="tarot-text">
-                <h3 style="color:white"></h3>
-                <p>
-                    Chúng tôi rất trân trọng ý kiến từ người dùng, độc giả để <br /> website ngày càng hoàn thiện và phát triển.
-                    <br />Chúng tôi sẽ xem xét và phản hồi bạn trong thời gian <br /> sớm nhất. Xin chân thành cảm ơn sự ủng hộ và tin tưởng <br />của bạn đối với Boitarot.vn.
-                    Chúc bạn có những<br /> trải nghiệm tích cực và hữu ích trên trang web của chúng tôi.
-                </p>
+        .about-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(19, 24, 44, 0.97);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(235, 187, 167, 0.1);
+            border: 1px solid rgba(235, 187, 167, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
 
-            </div>
-        </div>
-    </div>
-    <div id="welcomeCardContainer" class="welcome__card-container">
-        <div class="the-card">
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;  /* Reduced gap to accommodate new proportions */
+        }
 
-            <div id="welcomeCardBack" class="the-card__back">
-                <video id="home-front-image" autoplay muted playsinline loop>
-                    <source id="home-front-image-source" src="~/Content/Images/21.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="glare"></div>
-            </div>
-            <div class="the-card__front">
-                <img decoding="async" src="~/Content/Images/card-back.png" alt="Card Back" class="card-back-image">
-                <div class="glare"></div>
-            </div>
-        </div>
-    </div>
-</div>
+        .contact-content {
+            flex: 2;  /* Changed from 1 to 2 to make it take up 2/3 of the space */
+            max-width: none;  /* Removed max-width constraint */
+        }
 
-    @section Styles {
-        <style>
-            body {
-                background-color: #221831; /* Set background color for the page */
-                color: #f9f9f9; /* Set default text color to light */
-                font-family: Arial, sans-serif; /* Use a legible font */
+        .contact-content p {
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .welcome__card-container {
+            flex: 1;  /* Takes up 1/3 of the space */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .about-container::before,
+        .about-container::after {
+            content: "✧";
+            position: absolute;
+            color: rgba(235, 187, 167, 0.15);
+            font-size: 2em;
+        }
+
+        .about-container::before {
+            top: 10px;
+            left: 10px;
+        }
+
+        .about-container::after {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .about-container h1,
+        .about-container h2 {
+            color: #E8C5B0;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 10px rgba(235, 187, 167, 0.2);
+        }
+
+        .about-container h1 {
+            font-size: 2.4em;
+            margin-top: 0.5em;
+            text-align: center;
+            margin-bottom: 1.2em;
+        }
+
+        .about-container p,
+        .about-container ul {
+            color: #E8E1EF;
+            line-height: 1.7;
+            margin-bottom: 1.2em;
+            letter-spacing: 0.2px;
+        }
+
+        .about-container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-container li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .about-container li:before {
+            content: "✧";
+            position: absolute;
+            left: 0;
+            color: #C89F9C;
+        }
+
+        .the-card {
+            position: center;
+            width: 250px;
+            height: 400px;
+            transform-style: preserve-3d;
+            transform-origin: center;
+            animation-name: cardRotate;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+        }
+
+        .the-card__front,
+        .the-card__back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .the-card__front {
+            z-index: 2;
+        }
+
+        #home-front-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-back-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: transparent;
+        }
+
+        .the-card__back {
+            transform: rotateY(180deg);
+        }
+
+        @@keyframes cardRotate {
+            0% {
+                transform: rotateY(0);
             }
-            .about-container {
-                max-width: 50%;
+
+            50% {
+                transform: rotateY(180deg);
             }
 
-                .about-container h1,
-                .about-container h2 {
-                    color: #EC4400; /* Set headings color */
-                }
-
-                .about-container p,
-                .about-container ul {
-                    color: #f9f9f9; /* Ensure paragraphs and lists are light */
-                    line-height: 1.6; /* Increase line height for readability */
-                }
-
-                .about-container ul {
-                    list-style: none; /* Remove default list styling */
-                    padding: 0; /* Remove padding */
-                    margin: 0; /* Remove margin */
-                }
-
-                .about-container li {
-                    margin-bottom: 10px; /* Add spacing between list items */
-                }
-
-                .about-container a {
-                    text-decoration: none;
-                    color: #f29f05; /* Color for links */
-                }
-
-                    .about-container a:hover {
-                        color: #d98804; /* Darker color on hover */
-                    }
-            /* Text container */
-            .content-container {
-                display: flex;
-                justify-content: space-between; /* Ensure there's no gap between items */
-                align-items: center;
-                max-width: 80%;
-                padding: 20px;
-                margin-left:15%;
-                margin-top:5%;
-                padding:10%;
-                background-color: rgba(0, 0, 0, 0.5);
-                border-radius: 10px; /* Rounded corners */
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Box shadow */
+            100% {
+                transform: rotateY(360deg);
             }
-            @@media (max-width: 768px) {
-                .content-container {
-                    display: flex;
-                    justify-content: space-between; /* Ensure there's no gap between items */
-                    align-items: center;
-                    max-width: 80%;
-                    padding: 20px;
-                    margin-left: 15%;
-                    margin-top: 5%;
-                    padding: 10%;
-                    background-color: rgba(0, 0, 0, 0.5);
-                    border-radius: 10px; /* Rounded corners */
-                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Box shadow */
-                    flex-direction: column;
-                }
-            }
-            /* Text container */
-            .text-content {
-                flex-basis: 50%;
-                padding-right: 5px; /* Reduce or remove padding to minimize the gap */
-                text-align: justify;
-                margin: 0; /* Remove margins */
+        }
+
+        .glare {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 60%);
+            pointer-events: none;
+            border-radius: 15px;
+        }
+
+        @@media (max-width: 900px) {
+            .content-wrapper {
+                flex-direction: column;
+                align-items: stretch;
             }
 
-            /* Card container */
+            .contact-content,
             .welcome__card-container {
-                flex-basis: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                perspective: 1000px;
-                margin: 0; /* Ensure no margin */
-                padding: 0; /* Remove padding */
+                flex: 1 1 100%;
+                padding: 10px 0;
             }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <h1>Contact Information</h1>
 
-            .the-card {
-                position: center;
-                width: 250px; /* Full width of the container */
-                height: 400px; /* Full height of the container */
-                transform-style: preserve-3d;
-                transform-origin: center;
-                animation-name: cardRotate;
-                animation-duration: 8s;
-                animation-iteration-count: infinite;
-                animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
-            }
+        <div class="content-wrapper">
+            <div class="contact-content">
+                <p>For any feedback or inquiries, you can contact us through:</p>
 
-            .the-card__front,
-            .the-card__back {
-                position: absolute;
-                width: 100%; /* Match the container's width */
-                height: 100%; /* Match the container's height */
-                backface-visibility: hidden;
-                overflow: hidden; /* Prevent overflow */
-            }
+                <ul>
+                    <li>Address: 180 Nguyen Van Linh, Thac Gian, Thanh Khe, Da Nang</li>
+                    <li>Email: boitarotvn@gmail.com</li>
+                    <li>Phone: 0898 86 86 28</li>
+                </ul>
 
-            .the-card__front {
-                z-index: 2; /* Ensure the front side is on top */
-            }
+                <p>We greatly value feedback from our users and readers to continuously improve and develop our website.</p>
 
-            /* Make the video stretch to fill the entire front */
-            #home-front-image {
-                width: 100%; /* Full width */
-                height: 100%; /* Full height */
-                object-fit: cover; /* Stretch video to fill the card */
-            }
+                <p>We will review and respond to your inquiries as soon as possible. We sincerely thank you for your support and trust in Boitarot.vn. We hope you have positive and helpful experiences on our website.</p>
+            </div>
 
-            /* Make the image stretch to fill the entire back */
-            .card-back-image {
-                width: 100%; /* Full width */
-                height: 100%; /* Full height */
-                object-fit: cover; /* Stretch image to fill the card */
-            }
-
-            .the-card__back {
-                transform: rotateY(180deg); /* Rotate the back to align with the front */
-            }
-
-            /* Keyframe for smooth rotation */
-            @@keyframes cardRotate {
-                0% {
-                    transform: rotateY(0);
-                }
-
-                50% {
-                    transform: rotateY(180deg);
-                }
-
-                100% {
-                    transform: rotateY(360deg);
-                }
-            }
-
-            /* Removing any unwanted white backgrounds */
-            .welcome__card-container, .the-card__front, .the-card__back {
-                background: none; /* No background color */
-                margin: 0; /* Remove margin */
-                padding: 0; /* Remove padding */
-                border: none; /* No borders */
-            }
-
-            .glare {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(255, 255, 255, 0.1); /* Optional glare effect */
-                pointer-events: none;
-            }
-
-            /* Styles for the heading */
-            .ele-title {
-                color: darkgoldenrod;
-            }
-
-            h1 {
-                color: white;
-            }
-
-            p {
-                color: white;
-            }
-
-            /* Button styling */
-            .button {
-                background-color: #ff5f00;
-                color: white;
-                padding: 10px 20px;
-                text-decoration: none;
-                border-radius: 5px;
-                margin-top: 20px;
-            }
-
-                .button:hover {
-                    background-color: #e65300;
-                }
-
-            .icon-section {
-                display: flex; /* Flexbox for icons */
-                justify-content: space-between; /* Space between icons */
-                flex-wrap: wrap; /* Wrap icons to next line */
-            }
-
-            .icon-card {
-                background-color: rgba(255, 255, 255, 0.1); /* Background color of icon card */
-                border-radius: 10px; /* Rounded corners */
-                padding: 20px; /* Padding for icon card */
-                text-align: center; /* Center text */
-                flex: 1 1 200px; /* Flex properties */
-                margin: 10px; /* Margin between icon cards */
-            }
-
-                .icon-card img {
-                    width: 60px; /* Size of the icon */
-                    height: 60px; /* Size of the icon */
-                    margin-bottom: 10px; /* Space below the icon */
-                }
-
-                .icon-card h3 {
-                    font-size: 1.5em; /* Size of the heading in icon card */
-                    margin-bottom: 10px; /* Space below the heading */
-                }
-
-            .news-section {
-                margin-top: 40px; /* Space above news section */
-            }
-
-                .news-section h2 {
-                    font-size: 2.5em; /* Size of the news heading */
-                    margin-bottom: 20px; /* Space below the heading */
-                }
-
-            .news-container {
-                display: flex; /* Flexbox for news cards */
-                justify-content: space-between; /* Space between news cards */
-                flex-wrap: wrap; /* Allow wrapping */
-            }
-
-            .news-card {
-                background-color: #2c2a30; /* Background color for news card */
-                border-radius: 10px; /* Rounded corners */
-                width: calc(33.33% - 20px); /* Width for three cards in a row */
-                margin: 10px; /* Space around cards */
-                overflow: hidden; /* Hide overflow */
-                position: relative; /* Positioning context */
-                display: flex; /* Flexbox layout */
-                flex-direction: column; /* Column layout */
-            }
-
-                .news-card img {
-                    width: 100%; /* Image width */
-                    height: auto; /* Image height */
-                }
-
-                .news-card h3 {
-                    padding: 10px; /* Padding for title */
-                    font-size: 1.5em; /* Size of the title */
-                }
-
-                .news-card p {
-                    padding: 10px; /* Padding for text */
-                    flex-grow: 1; /* Allow the paragraph to grow */
-                }
-
-                .news-card span {
-                    padding: 10px; /* Padding for date */
-                    font-size: 0.8em; /* Size of date */
-                    color: #bbb; /* Color of date */
-                }
-        </style>
-    }
-
+            <div id="welcomeCardContainer" class="welcome__card-container">
+                <div class="the-card">
+                    <div class="the-card__front">
+                        <img src="~/Content/Images/card-back.png" alt="Card Back" class="card-back-image">
+                        <div class="glare"></div>
+                    </div>
+                    <div class="the-card__back">
+                        <video id="home-front-image" autoplay muted playsinline loop>
+                            <source src="~/Content/Images/21.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="glare"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

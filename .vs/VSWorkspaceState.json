@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WebApplication2",
+    "\\WebApplication2\\Areas",
+    "\\WebApplication2\\Areas\\Admin",
+    "\\WebApplication2\\Areas\\Admin\\Views",
+    "\\WebApplication2\\Areas\\Admin\\Views\\admin",
+    "\\WebApplication2\\Views",
+    "\\WebApplication2\\Views\\Menu"
   ],
+  "SelectedNode": "\\WebApplication2\\Areas\\Admin\\Views\\admin\\AdminLanding.cshtml",
   "PreviewInSolutionExplorer": false
 }

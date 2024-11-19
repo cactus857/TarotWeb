@@ -27,12 +27,14 @@ namespace WebApplication2.Models
     
         public virtual DbSet<cardtable> cardtables { get; set; }
         public virtual DbSet<menutable> menutables { get; set; }
-        public virtual DbSet<newstable> newstables { get; set; }
         public virtual DbSet<cardtable_cups> cardtable_cups { get; set; }
         public virtual DbSet<cardtable_swords> cardtable_swords { get; set; }
         public virtual DbSet<cardtable_pentacles> cardtable_pentacles { get; set; }
         public virtual DbSet<cardtable_wands> cardtable_wands { get; set; }
         public virtual DbSet<readertable> readertables { get; set; }
         public virtual DbSet<cardtable_use> cardtable_use { get; set; }
+        public virtual DbSet<newstable> newstables { get; set; }
+
+        public DbSet<Menu> Menus { get; set; }
     }
 }

@@ -26,10 +26,6 @@ namespace WebApplication2.Controllers
 
             return View();
         }
-        public ActionResult Readers()
-        {
-            ViewBag.Message = "Your Readers page.";
-            return View();
-        }
+      
     }
 }

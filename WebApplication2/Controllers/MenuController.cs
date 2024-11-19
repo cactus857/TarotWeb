@@ -20,10 +20,7 @@ namespace WebApplication2.Controllers
         {
             return PartialView();
         }
-        public ActionResult Readers()
-        {
-            return View();
-        }
+     
 
         public ActionResult About()
         {
@@ -31,22 +28,11 @@ namespace WebApplication2.Controllers
         }
 
 
-        public ActionResult TarotOnline()
-        {
-           
-            return View();
-        }
+     
         public ActionResult Contact()
         {
             return View();
         }
-        public ActionResult InfoReader()
-        {
-            return View();
-        }
-        public ActionResult Test()
-        {
-            return View();
-        }
+        
     }
 }

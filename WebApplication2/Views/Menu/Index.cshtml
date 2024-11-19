@@ -1,19 +1,22 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
 <div class="content-container">
     <div class="text-content">
-        <div class="ele-title">Giải mã cuộc sống với tarot</div>
+        <div class="ele-tilte">Decoding Life with Tarot</div>
         <h1>Bói bài Tarot online miễn phí và<br>chính xác nhất - BoiTarot.vn</h1>
         <p>
-            Tarot là phương pháp sử dụng những lá bài Tarot để xem bói và dự đoán về tương lai, tình yêu, công việc, tiền tài và sức khỏe,... bắt đầu xuất hiện tại Châu Âu vào cuối thế kỷ 14. Một cỗ bài Tarot bao gồm 78 lá bài, mỗi lá bài mang một ý nghĩa và biểu tượng riêng biệt, tượng trưng cho những khía cạnh khác nhau của cuộc sống. Việc sử dụng bài Tarot để xem bói không chỉ giúp dự đoán tương lai mà còn mở ra những khám phá mới về bản thân. Điều này giúp bạn hướng tới một cuộc sống hạnh phúc và bình yên hơn, thậm chí làm sáng tỏ những điều bí ẩn, sâu thẳm trong cuộc sống của mình.
+            z
         </p>
         <p>
-            Boitarot.vn là một website chuyên về bói Tarot nhằm giúp người dùng giải đáp thắc mắc, khám phá và hiểu sâu hơn về các khía cạnh khác nhau trong cuộc sống một cách chính xác nhất.
+            BoiTarot.vn is a website dedicated to tarot reading, aiming to help users answer questions, explore, and gain a deeper understanding of various aspects of life as accurately as possible.
         </p>
-        <a href="/menu/tarotonline" class="button">Bói Tarot Online</a>
+        <a href="/card/TarotOnline" class="button">Bói Tarot Online</a>
     </div>
     <div id="welcomeCardContainer" class="welcome__card-container">
         <div class="the-card">
@@ -26,7 +29,7 @@
                 <div class="glare"></div>
             </div>
             <div class="the-card__front">
-                <img decoding="async" src="~/Content/Images/card-back.png" alt="Card Back" class="card-back-image">
+                <img decoding="async" src="~/Content/Images/cardback.jpg" alt="Card Back" class="card-back-image">
                 <div class="glare"></div>
             </div>
         </div>
@@ -52,22 +55,22 @@
     <div class="intro-section">
         <div class="icon-section">
             <div class="icon-card">
-                <img src="path/to/icon1.png" alt="Phát Triển Bản Thân">
+                <img src="~/Content/Images/tarot-icon.png" alt="Phát Triển Bản Thân">
                 <h3>Phát Triển Bản Thân</h3>
                 <p>Khám phá và hiểu rõ điểm mạnh, điểm yếu cũng như những nhu cầu và mong muốn của bản thân bạn.</p>
             </div>
             <div class="icon-card">
-                <img src="path/to/icon2.png" alt="Giải Quyết Thắc Mắc">
+                <img src="~/Content/Images/tarot-icon.png" alt="Giải Quyết Thắc Mắc">
                 <h3>Giải Quyết Thắc Mắc</h3>
                 <p>Giải đáp những thắc mắc, phân tích những nghi ngờ và đưa ra những quyết định thông minh.</p>
             </div>
             <div class="icon-card">
-                <img src="path/to/icon3.png" alt="Nâng Cao Trực Giác">
+                <img src="~/Content/Images/tarot-icon.png" alt="Nâng Cao Trực Giác">
                 <h3>Nâng Cao Trực Giác</h3>
-                <p>Tăng cường khả năng sáng tạo, phân đoán và linh hoạt trong các suy nghĩ và hành động của bạn.</p>
+                <p>Tăng cường khả năng sáng tạo, phân đoán và linh hoạt trong suy nghĩ và hành động của bạn.</p>
             </div>
             <div class="icon-card">
-                <img src="path/to/icon4.png" alt="Cân Bằng Cảm Xúc">
+                <img src="~/Content/Images/tarot-icon.png" alt="Cân Bằng Cảm Xúc">
                 <h3>Cân Bằng Cảm Xúc</h3>
                 <p>Đưa ra lời khuyên hỗ trợ thư giãn, giảm căng thẳng và lo lắng, tạo ra cảm giác bình yên.</p>
             </div>
@@ -75,72 +78,79 @@
     </div>
 </div>
 
+
+
 <div class="news-section">
     <h2>Tin tức về Bói Tarot.vn</h2>
     <div class="news-container">
-        <div class="news-card">
-            <img src="path/to/news1-image.jpg" alt="Black Cats Tarot">
-            <h3>Tổng Quan Và Ý Nghĩa Của Bài Black Cats Tarot</h3>
-            <p>Bộ bài Black Cats Tarot là một trong những bộ bài Tarot hiện đại độc đáo, nổi bật với các hình ảnh dễ thương và ý nghĩa sâu sắc.</p>
-            <span>14 Tháng Bảy, 2024</span>
-        </div>
-        <div class="news-card">
-            <img src="path/to/news2-image.jpg" alt="Shadowscapes Tarot">
-            <h3>Tổng Quan Và Ý Nghĩa Của Bài Shadowscapes Tarot</h3>
-            <p>Các lá bài Shadowscapes Tarot nổi bật với phong cách nghệ thuật thủy mặc và sơn dầu đặc biệt.</p>
-            <span>14 Tháng Bảy, 2024</span>
-        </div>
-        <div class="news-card">
-            <img src="path/to/news3-image.jpg" alt="Aleister Crowley Thoth Tarot">
-            <h3>Tổng Quan Và Ý Nghĩa Của Bài Aleister Crowley Thoth Tarot</h3>
-            <p>Các lá bài Thoth Tarot nổi bật với thiết kế phức tạp và chi tiết, mang đến nhiều thông điệp sâu sắc.</p>
-            <span>14 Tháng Bảy, 2024</span>
-        </div>
+        @if (Model == null || !Model.Any())
+        {
+
+        }
+        else
+        {
+            foreach (var article in Model)
+            {
+                <div class="news-card">
+                    <img src="@Url.Content(article.ImageLink)" alt="@article.Title ?? " No Title"" />
+
+
+                    <h3>@article.Title ?? "No Title"</h3>
+                    <p>@article.Summary ?? "No Summary"</p>
+                    <span>@(article.Date != null ? article.Date.ToString("dd MMMM, yyyy") : "No Date")</span>
+                </div>
+            }
+        }
     </div>
 </div>
+
+
+
+
+
+
+
+
 @section Styles {
     <style>
-        body {
-            background-color: #1e0026; /* Match the background color from the screenshot */
-            color: white;
-        }
 
-        /* Main container to hold both the text and the card */
-      
-        /* Text container */
+
+
         .content-container {
             display: flex;
-            justify-content: space-between; /* Ensure there's no gap between items */
-            align-items: center; /* Vertically center align text and card */
+            justify-content: space-between;
+            align-items: center;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 50px 25px; /* Adjust as necessary, or reduce this */
+            padding: 50px 25px;
+            gap: 20px;
+            box-sizing: border-box;
         }
 
-        /* Text container */
         .text-content {
-            flex-basis: 50%;
-            padding-right: 5px; /* Reduce or remove padding to minimize the gap */
+            flex: 1 1 50%;
+            padding-right: 10px;
             text-align: justify;
-            margin: 0; /* Remove margins */
+            margin: 0;
+            box-sizing: border-box;
         }
 
-        /* Card container */
         .welcome__card-container {
-            flex-basis: 50%;
+            flex: 1 1 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             perspective: 1000px;
-            margin: 0; /* Ensure no margin */
-            padding: 0; /* Remove padding */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         .the-card {
             position: center;
-            width: 250px; /* Full width of the container */
-            height: 400px; /* Full height of the container */
+            width: 250px;
+            height: 400px;
             transform-style: preserve-3d;
             transform-origin: center;
             animation-name: cardRotate;
@@ -152,35 +162,34 @@
         .the-card__front,
         .the-card__back {
             position: absolute;
-            width: 100%; /* Match the container's width */
-            height: 100%; /* Match the container's height */
+            width: 100%;
+            height: 100%;
             backface-visibility: hidden;
-            overflow: hidden; /* Prevent overflow */
+            overflow: hidden;
+            border-radius: 15px;
         }
 
         .the-card__front {
-            z-index: 2; /* Ensure the front side is on top */
+            z-index: 2;
         }
 
-        /* Make the video stretch to fill the entire front */
         #home-front-image {
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            object-fit: cover; /* Stretch video to fill the card */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        /* Make the image stretch to fill the entire back */
         .card-back-image {
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            object-fit: cover; /* Stretch image to fill the card */
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Changed to contain to show full image */
+            background-color: transparent; /* Ensures no background color shows through */
         }
 
         .the-card__back {
-            transform: rotateY(180deg); /* Rotate the back to align with the front */
+            transform: rotateY(180deg);
         }
 
-        /* Keyframe for smooth rotation */
         @@keyframes cardRotate {
             0% {
                 transform: rotateY(0);
@@ -195,122 +204,234 @@
             }
         }
 
-        /* Removing any unwanted white backgrounds */
-        .welcome__card-container, .the-card__front, .the-card__back {
-            background: none; /* No background color */
-            margin: 0; /* Remove margin */
-            padding: 0; /* Remove padding */
-            border: none; /* No borders */
-        }
-
         .glare {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.1); /* Optional glare effect */
+            background: linear-gradient( 135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 60% );
             pointer-events: none;
+            border-radius: 15px;
+        }
+
+        @@media (max-width: 900px) {
+            .content-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .text-content,
+            .welcome__card-container {
+                flex: 1 1 100%;
+                padding: 10px 0;
+            }
         }
 
         /* Styles for the heading */
-        .ele-title {
-            color: darkgoldenrod;
+
+
+        .ele-tilte {
+            color: #b08450;
+            font-size: 17px;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.4em;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-family: 'Cinzel', serif; /* Title font */
         }
 
         h1 {
-            color: white;
+            font-family: 'Cinzel', serif; /* Apply Cinzel font to headings */
+            font-size: 2.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            letter-spacing: 1px;
         }
 
         p {
-            color: white;
+            font-family: 'Lora', serif; /* Body text font */
+            font-size: 1.2em;
+            line-height: 1.6em;
         }
 
-        /* Button styling */
-        .button {
-            background-color: #ff5f00;
+        button {
+            font-family: 'Cinzel', serif; /* Button font */
+            background-color: #b08450;
             color: white;
             padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+            border: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
         }
 
-            .button:hover {
-                background-color: #e65300;
+            button:hover {
+                background-color: #8c673b; /* Darken button color on hover */
             }
 
+
+
+
         .icon-section {
-            display: flex; /* Flexbox for icons */
-            justify-content: space-between; /* Space between icons */
-            flex-wrap: wrap; /* Wrap icons to next line */
+            display: flex;
+            justify-content: space-around; /* Spread icons evenly */
+            flex-wrap: wrap; /* Wrap items on smaller screens */
+            gap: 20px; /* Space between cards */
+            align-items: stretch; /* Make cards the same height */
         }
 
         .icon-card {
-            background-color: rgba(255, 255, 255, 0.1); /* Background color of icon card */
-            border-radius: 10px; /* Rounded corners */
-            padding: 20px; /* Padding for icon card */
-            text-align: center; /* Center text */
-            flex: 1 1 200px; /* Flex properties */
-            margin: 10px; /* Margin between icon cards */
+            background-color: #1b0f2c;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            flex: 1 1 calc(25% - 20px); /* Four cards per row on larger screens */
+            min-width: 200px;
+            max-width: 250px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%; /* Ensure equal height for all cards */
         }
 
             .icon-card img {
-                width: 60px; /* Size of the icon */
-                height: 60px; /* Size of the icon */
-                margin-bottom: 10px; /* Space below the icon */
+                width: 60px;
+                height: 60px;
+                margin-bottom: 15px;
             }
 
             .icon-card h3 {
-                font-size: 1.5em; /* Size of the heading in icon card */
-                margin-bottom: 10px; /* Space below the heading */
+                color: white;
+                font-size: 1.5em;
+                margin: 10px 0;
             }
 
-        .news-section {
-            margin-top: 40px; /* Space above news section */
+            .icon-card p {
+                color: white;
+                font-size: 1em;
+                flex-grow: 1; /* Makes text occupy extra space if available */
+            }
+
+        /* Responsive adjustments */
+        @@media (max-width: 992px) {
+            .icon-card {
+                flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
+            }
         }
 
-            .news-section h2 {
-                font-size: 2.5em; /* Size of the news heading */
-                margin-bottom: 20px; /* Space below the heading */
+        @@media (max-width: 576px) {
+            .icon-card {
+                flex: 1 1 100%; /* Full-width cards on small screens */
+            }
+        }
+
+
+        /* News section container */
+        .news-section {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping to next row */
+            justify-content: space-between; /* Even spacing between cards */
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto; /* Center the container on the page */
+        }
+
+        /* Individual news card styling */
+        .news-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            width: calc(33.333% - 20px); /* 3 cards per row */
+            min-width: 250px; /* Ensure minimum size */
+            max-width: 350px; /* Optional: prevent cards from growing too wide */
+            text-align: center;
+        }
+
+            /* Hover effect on cards */
+            .news-card:hover {
+                transform: scale(1.05);
             }
 
+        /* Clickable link covering the entire card */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%; /* Full height to make the link clickable */
+        }
+
+        /* Image styling inside the card */
+        .card-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover; /* Ensures image fits nicely */
+        }
+
+        /* Card body content */
+        .card-body {
+            padding: 15px;
+        }
+
+            /* Article title styling */
+            .card-body h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+                color: #333;
+            }
+
+        /* Card summary styling */
+        .card-summary {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* Date text styling */
+        .card-date {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Responsive design adjustments */
+        @@media (max-width: 992px) {
+            .news-card {
+                width: calc(50% - 20px); /* 2 cards per row on tablets */
+            }
+        }
+
+        @@media (max-width: 576px) {
+            .news-card {
+                width: 100%; /* Full-width cards on small screens */
+            }
+        }
+
+
         .news-container {
-            display: flex; /* Flexbox for news cards */
-            justify-content: space-between; /* Space between news cards */
-            flex-wrap: wrap; /* Allow wrapping */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .news-card {
-            background-color: #2c2a30; /* Background color for news card */
-            border-radius: 10px; /* Rounded corners */
-            width: calc(33.33% - 20px); /* Width for three cards in a row */
-            margin: 10px; /* Space around cards */
-            overflow: hidden; /* Hide overflow */
-            position: relative; /* Positioning context */
-            display: flex; /* Flexbox layout */
-            flex-direction: column; /* Column layout */
+            width: 30%;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 10px;
         }
 
-            .news-card img {
-                width: 100%; /* Image width */
-                height: auto; /* Image height */
-            }
-
-            .news-card h3 {
-                padding: 10px; /* Padding for title */
-                font-size: 1.5em; /* Size of the title */
-            }
-
-            .news-card p {
-                padding: 10px; /* Padding for text */
-                flex-grow: 1; /* Allow the paragraph to grow */
-            }
-
-            .news-card span {
-                padding: 10px; /* Padding for date */
-                font-size: 0.8em; /* Size of date */
-                color: #bbb; /* Color of date */
-            }
+        .news-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
     </style>
 }
