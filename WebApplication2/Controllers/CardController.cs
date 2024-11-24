@@ -9,7 +9,7 @@ namespace WebApplication2.Controllers
 {
     public class CardController : Controller
     {
-        TAROTWEBEntities _db= new TAROTWEBEntities();
+        TAROTWEBEntities1 _db= new TAROTWEBEntities1();
         CardsModel cards= new CardsModel();
         // GET: Card
         public ActionResult TarotOnline()
@@ -19,6 +19,7 @@ namespace WebApplication2.Controllers
             cards.cardtables_swords = _db.cardtable_swords.ToList();
             cards.cardtables_pentacles = _db.cardtable_pentacles.ToList();
             cards.cardtables_wands = _db.cardtable_wands.ToList();
+            cards.cardtables_uses = _db.cardtable_use.ToList();
             return View(cards);
         }
 

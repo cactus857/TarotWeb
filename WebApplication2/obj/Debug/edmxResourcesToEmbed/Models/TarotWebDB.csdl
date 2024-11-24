@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TAROTWEBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cardtable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="alt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cardtable_cups">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="alt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cardtable_pentacles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="alt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cardtable_swords">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="alt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cardtable_use">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="situation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="obstacle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="advice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cardtable_wands">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="alt" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripsion_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_u" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_r" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="readertable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="position" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="detail_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="menutable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hide" Type="Boolean" />
+    <Property Name="order" Type="Int32" />
+    <Property Name="datebegin" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="newstable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hide" Type="Boolean" />
+    <Property Name="order" Type="Int32" />
+    <Property Name="datebegin" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="TAROTWEBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cardtables" EntityType="Self.cardtable" />
+    <EntitySet Name="cardtable_cups" EntityType="Self.cardtable_cups" />
+    <EntitySet Name="cardtable_pentacles" EntityType="Self.cardtable_pentacles" />
+    <EntitySet Name="cardtable_swords" EntityType="Self.cardtable_swords" />
+    <EntitySet Name="cardtable_use" EntityType="Self.cardtable_use" />
+    <EntitySet Name="cardtable_wands" EntityType="Self.cardtable_wands" />
+    <EntitySet Name="readertables" EntityType="Self.readertable" />
+    <EntitySet Name="menutables" EntityType="Self.menutable" />
+    <EntitySet Name="newstables" EntityType="Self.newstable" />
+  </EntityContainer>
+</Schema>

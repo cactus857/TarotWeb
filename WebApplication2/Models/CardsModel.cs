@@ -13,6 +13,7 @@ namespace WebApplication2.Models
         public List<cardtable_swords> cardtables_swords { get; set; }
         public List<cardtable_pentacles> cardtables_pentacles { get; set; }
         public List<cardtable_wands> cardtables_wands { get; set; }
+        public List<cardtable_use> cardtables_uses { get; set; }
     }
 
     public class Menu

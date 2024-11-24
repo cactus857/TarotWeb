@@ -47,6 +47,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CKFinder, Version=2.3.1.2492, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Areas\Admin\Content\ckfinder\bin\Debug\CKFinder.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -243,6 +247,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\adminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CardCController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CardGController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CardPController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CardSController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CardUController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CardWController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ManaReaderController.cs" />
     <Compile Include="Controllers\CardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
@@ -1404,6 +1415,7 @@
     <Content Include="Areas\Admin\Content\ckfinder\translations.txt" />
     <Content Include="Areas\Admin\Content\css_\sb-admin-2.css" />
     <Content Include="Areas\Admin\Content\css_\sb-admin-2.min.css" />
+    <Content Include="Areas\Admin\Content\css_\site.css" />
     <Content Include="Areas\Admin\Content\data\flot-data.js" />
     <Content Include="Areas\Admin\Content\data\morris-data.js" />
     <Content Include="Areas\Admin\Content\dist\css\sb-admin-2.css" />
@@ -3437,13 +3449,6 @@
     <Content Include="Content\css\style.css.map" />
     <Content Include="Content\css\style.scss" />
     <Content Include="Content\images\galaxy.webp" />
-    <EntityDeploy Include="Models\TarotWebDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TarotWebDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\TarotWebDB.edmx.diagram">
-      <DependentUpon>TarotWebDB.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\Admin\Content\ckeditor\CHANGES.md" />
     <Content Include="Areas\Admin\Content\ckeditor\LICENSE.md" />
     <Content Include="Areas\Admin\Content\ckeditor\plugins\bower.json" />
@@ -3714,8 +3719,43 @@
     <Content Include="Areas\Admin\Content\vendor_\jquery\jquery.min.map" />
     <Content Include="Areas\Admin\Content\vendor_\jquery\jquery.slim.min.map" />
     <Content Include="Areas\Admin\Views\admin\AdminLanding.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_MyLayout.cshtml" />
     <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\CardG\CardG.cshtml" />
+    <Content Include="Areas\Admin\Views\CardG\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CardG\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CardG\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\CardC\CardC.cshtml" />
+    <Content Include="Areas\Admin\Views\CardC\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CardC\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CardC\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\CardS\CardS.cshtml" />
+    <Content Include="Areas\Admin\Views\CardS\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CardS\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CardS\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\CardP\CardP.cshtml" />
+    <Content Include="Areas\Admin\Views\CardP\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CardP\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CardP\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\CardW\CardW.cshtml" />
+    <Content Include="Areas\Admin\Views\CardW\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CardW\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CardW\Delete.cshtml" />
+    <EntityDeploy Include="Models\TarotWebDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TarotWebDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\TarotWebDB.edmx.diagram">
+      <DependentUpon>TarotWebDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\Admin\Views\CardU\CardU.cshtml" />
+    <Content Include="Areas\Admin\Views\CardU\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CardU\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CardU\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ManaReader\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ManaReader\ManaReader.cshtml" />
+    <Content Include="Areas\Admin\Views\ManaReader\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ManaReader\Edit.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

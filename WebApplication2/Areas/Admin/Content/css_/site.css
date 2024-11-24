@@ -1,0 +1,42 @@
+﻿/* Định dạng chung cho các nút */
+.btn {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Định dạng cho nút "Edit" */
+.btn-edit {
+    background-color: #4CAF50; /* Màu xanh lá */
+    color: white;
+}
+
+    .btn-edit:hover {
+        background-color: #45a049; /* Khi di chuột vào */
+    }
+
+/* Định dạng cho nút "Details" */
+.btn-details {
+    background-color: #2196F3; /* Màu xanh dương */
+    color: white;
+}
+
+    .btn-details:hover {
+        background-color: #0b7dda; /* Khi di chuột vào */
+    }
+
+/* Định dạng cho nút "Delete" */
+.btn-delete {
+    background-color: #f44336; /* Màu đỏ */
+    color: white;
+}
+
+    .btn-delete:hover {
+        background-color: #da190b; /* Khi di chuột vào */
+    }

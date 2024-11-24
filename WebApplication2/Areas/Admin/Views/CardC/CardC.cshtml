@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WebApplication2.Models.cardtable_cups>
+
+@{
+    ViewBag.Title = "CardC";
+    Layout = "~/Areas/Admin/Views/Shared/_MyLayout.cshtml";
+}
+<link href="~/Areas/Admin/Content/css_/site.css" rel="stylesheet" />
+<h2>CardC</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-details" })
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tên Lá Bài
+        </th>
+        <th>
+            Hình Lá Bài
+        </th>
+        <th>
+            ALT
+        </th>
+        <th>
+            Mô Tả Thuận
+        </th>
+        <th>
+            Mô Tả Ngược
+        </th>
+        <th>
+            Ý Nghĩa Thuận
+        </th>
+        <th>
+            Ý Nghĩa Ngược
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            <img src="~/Content/images/cups/@item.link" alt="@item.alt" style="max-width: 150px; max-height: 150px; width: auto; height: auto;" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.alt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripsion_u)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripsion_r)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.detail_u)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.detail_r)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-edit" })
+            @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-delete" })
+        </td>
+    </tr>
+}
+
+</table>

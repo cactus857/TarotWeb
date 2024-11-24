@@ -18,12 +18,12 @@ namespace WebApplication2.Models
         public string name { get; set; }
         public string position { get; set; }
         public string link { get; set; }
+        public string img { get; set; }
         public string address { get; set; }
         public string phone { get; set; }
         public string detail_1 { get; set; }
         public string detail_2 { get; set; }
         public string detail_3 { get; set; }
         public string detail_4 { get; set; }
-        public string img { get; set; }
     }
 }

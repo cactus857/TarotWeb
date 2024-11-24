@@ -116,12 +116,13 @@
     <EntitySetMapping Name="newstables">
       <EntityTypeMapping TypeName="TAROTWEBModel.newstable">
         <MappingFragment StoreEntitySet="newstable">
-          <ScalarProperty Name="Date" ColumnName="Date" />
-          <ScalarProperty Name="Content" ColumnName="Content" />
-          <ScalarProperty Name="Summary" ColumnName="Summary" />
-          <ScalarProperty Name="ImageLink" ColumnName="ImageLink" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="datebegin" ColumnName="datebegin" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="meta" ColumnName="meta" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

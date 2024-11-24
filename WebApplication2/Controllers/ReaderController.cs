@@ -9,7 +9,7 @@ namespace WebApplication2.Controllers
 {
     public class ReaderController : Controller
     {
-        TAROTWEBEntities _db = new TAROTWEBEntities();
+        TAROTWEBEntities1 _db = new TAROTWEBEntities1();
         // GET: Reader
         public ActionResult Readers()
         {

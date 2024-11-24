@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="17991b3a123e4fad891bb56a976c0dda" Name="Diagram1">
+      <Diagram DiagramId="85aa255d516a4fdb82f708ea1c3452c8" Name="Diagram1">
         <EntityTypeShape EntityType="TAROTWEBModel.cardtable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TAROTWEBModel.menutable" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TAROTWEBModel.cardtable_cups" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="TAROTWEBModel.cardtable_swords" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="TAROTWEBModel.cardtable_pentacles" Width="1.5" PointX="5.375" PointY="4.75" />
-        <EntityTypeShape EntityType="TAROTWEBModel.cardtable_wands" Width="1.5" PointX="7.375" PointY="0.75" />
-        <EntityTypeShape EntityType="TAROTWEBModel.readertable" Width="1.5" PointX="7.375" PointY="4.75" />
-        <EntityTypeShape EntityType="TAROTWEBModel.cardtable_use" Width="1.5" PointX="0.75" PointY="8.75" />
-        <EntityTypeShape EntityType="TAROTWEBModel.newstable" Width="1.5" PointX="5.125" PointY="0.75" />
+        <EntityTypeShape EntityType="TAROTWEBModel.cardtable_cups" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAROTWEBModel.cardtable_pentacles" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAROTWEBModel.cardtable_swords" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAROTWEBModel.cardtable_use" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAROTWEBModel.cardtable_wands" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAROTWEBModel.readertable" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAROTWEBModel.menutable" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAROTWEBModel.newstable" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
