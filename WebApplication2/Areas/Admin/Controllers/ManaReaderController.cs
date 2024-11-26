@@ -25,6 +25,7 @@ namespace WebApplication2.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        
         [ValidateInput(false)]
         public ActionResult Create(readertable ct, HttpPostedFileBase img)
         {
