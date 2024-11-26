@@ -9,9 +9,9 @@
 <div class="content-container">
     <div class="text-content">
         <div class="ele-tilte">Decoding Life with Tarot</div>
-        <h1>Bói bài Tarot online miễn phí và<br>chính xác nhất - BoiTarot.vn</h1>
+        <h1>FREE TAROT READING<br>BoiTarot.vn</h1>
         <p>
-            z
+            Tarot is a method of using Tarot cards to predict and explore the future, love, career, wealth, and health, which first appeared in Europe at the end of the 14th century. A Tarot deck consists of 78 cards, each with its unique meaning and symbol, representing different aspects of life. Using Tarot cards for divination not only helps predict the future but also opens up new self-discoveries. This helps you move towards a happier and more peaceful life, and even illuminate the mysterious, deep-seated elements of your existence.
         </p>
         <p>
             BoiTarot.vn is a website dedicated to tarot reading, aiming to help users answer questions, explore, and gain a deeper understanding of various aspects of life as accurately as possible.
@@ -81,7 +81,7 @@
 
 
 <div class="news-section">
-    <h2>Tin tức về Bói Tarot.vn</h2>
+
     <div class="news-container">
         @if (Model == null || !Model.Any())
         {
@@ -114,7 +114,26 @@
 @section Styles {
     <style>
 
+        body {
+            background-color: #1A1A1A;
+            color: #E8E1EF;
+            font-family: Arial, sans-serif;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231A1A1A"/><circle cx="50" cy="50" r="1" fill="%23E8C5B0" opacity="0.2"/></svg>');
+            background-size: 30px 30px;
+        }
 
+        /* Container Styling Similar to Contact Page */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(19, 24, 44, 0.97);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(235, 187, 167, 0.1);
+            border: 1px solid rgba(235, 187, 167, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
 
         .content-container {
             display: flex;
@@ -127,6 +146,30 @@
             gap: 20px;
             box-sizing: border-box;
         }
+
+
+            /* Decorative Stars */
+            .container::before,
+            .container::after,
+            .content-container::before,
+            .content-container::after {
+                content: "✧";
+                position: absolute;
+                color: rgba(235, 187, 167, 0.15);
+                font-size: 2em;
+            }
+
+            .container::before,
+            .content-container::before {
+                top: 10px;
+                left: 10px;
+            }
+
+            .container::after,
+            .content-container::after {
+                bottom: 10px;
+                right: 10px;
+            }
 
         .text-content {
             flex: 1 1 50%;
@@ -242,19 +285,75 @@
             font-family: 'Cinzel', serif; /* Title font */
         }
 
-        h1 {
-            font-family: 'Cinzel', serif; /* Apply Cinzel font to headings */
-            font-size: 2.5em;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #fff;
-            letter-spacing: 1px;
+        h1, h2 {
+            color: #E8C5B0;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 10px rgba(235, 187, 167, 0.2);
         }
 
-        p {
-            font-family: 'Lora', serif; /* Body text font */
-            font-size: 1.2em;
-            line-height: 1.6em;
+        h1 {
+            font-size: 2.4em;
+            margin-top: 0.5em;
+            text-align: center;
+            margin-bottom: 1.2em;
+        }
+
+        /* Paragraphs and Lists */
+        p, ul {
+            color: #E8E1EF;
+            line-height: 1.7;
+            margin-bottom: 1.2em;
+            letter-spacing: 0.2px;
+        }
+
+        /* List Styling */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+            li:before {
+                content: "✧";
+                position: absolute;
+                left: 0;
+                color: #C89F9C;
+            }
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            background-color: #C89F9C;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .button:hover {
+                background-color: #B08080;
+            }
+
+        /* Responsive Adjustments */
+        @@media (max-width: 900px) {
+            .content-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .text-content,
+            .welcome__card-container {
+                flex: 1 1 100%;
+                padding: 10px 0;
+            }
         }
 
         button {

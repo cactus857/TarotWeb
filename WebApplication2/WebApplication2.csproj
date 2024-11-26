@@ -3791,6 +3791,7 @@
     <Content Include="Views\Card\TarotOnline.cshtml" />
     <Content Include="Views\Reader\getInfo.cshtml" />
     <Content Include="Views\Reader\Readers.cshtml" />
+    <Content Include="Views\Menu\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />

@@ -30,14 +30,11 @@
 
 <h2>ManaReader</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-details" })
-</p>
 <div class="row">
     <div class="col-lg-12">
         <div class="panel panel-red">
             <div class="panel-heading">
-                Quản lý Tin tức
+                Quản lý Reader
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
@@ -109,10 +106,10 @@
                                     @Html.Raw(item.detail_2)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.detail_3)
+                                    @Html.Raw(item.detail_3)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.detail_4)
+                                    @Html.Raw(item.detail_4)
                                 </td>
                                 <td>
                                     @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-edit" })
@@ -132,16 +129,19 @@
 @section _Footer
 {
     <!-- DataTables JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Ensure jQuery is loaded first -->
     <script src="/Areas/admin/Content/vendor/datatables/js/jquery.dataTables.min.js"></script>
     <script src="/Areas/admin/Content/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
     <script src="/Areas/admin/Content/vendor/datatables-responsive/dataTables.responsive.js"></script>
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+
     <script>
         $(document).ready(function () {
-            $('#dataTables-example').DataTable({
-                responsive: true
-            });
+            // Check if DataTable is already initialized
+            if (!$.fn.DataTable.isDataTable('#dataTables-example')) {
+                $('#dataTables-example').DataTable({
+                    responsive: true
+                });
+            }
         });
     </script>
-
 }

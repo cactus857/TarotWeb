@@ -11,20 +11,20 @@
         <div class="tarot-text">
             <p>.</p>
             <h3 style="color:white">@Model.name</h3>
-            <p>@Model.detail_1</p>
+            <p>@Html.Raw(@Model.detail_1)</p>
 
         </div>
     </div>
     <a href="@Model.link">
         <h2>Liên hệ</h2>
     </a>
-    <p>@Model.detail_2</p>
+    <p>@Html.Raw(@Model.detail_2)</p>
 
     <h2>Chuyên môn trong lĩnh vực bói bài Tarot</h2>
-    <p>@Model.detail_3</p>
+    <p>@Html.Raw(@Model.detail_3)</p>
    
     <h2>Thông Tin Liên Hệ</h2>
-    <p>@Model.detail_4</p>
+    <p>@Html.Raw(@Model.detail_4)</p>
     <ul>
         <li>Xem bói trực tiếp cùng chuyên gia tại:</li>
         <li>@Model.link</li>
