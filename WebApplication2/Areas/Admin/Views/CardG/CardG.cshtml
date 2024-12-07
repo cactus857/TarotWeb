@@ -92,9 +92,12 @@
                                     @Html.Raw(item.detail_r)
                                 </td>
                                 <td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-edit" })
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-delete" })
+                                    <a href="@Url.Action("Edit", "CardG", new {  name =item.name.Replace(" ", "-").ToLower() })" class="btn btn-edit">Edit</a>
+
+
+                                    <a href="@Url.Action("Delete", "CardG", new { name = item.name.Replace(" ", "-").ToLower() })" class="btn btn-delete">Delete</a>
                                 </td>
+
                             </tr>
                         }
 

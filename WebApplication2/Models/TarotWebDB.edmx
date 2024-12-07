@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TAROTWEBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TAROTWEBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="cardtable">
           <Key>
             <PropertyRef Name="id" />
@@ -81,34 +81,6 @@
           <Property Name="detail_u" Type="nvarchar(max)" />
           <Property Name="detail_r" Type="nvarchar(max)" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'TAROTWEB.dbo.menutable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="menutable">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="nvarchar" MaxLength="50" />
-          <Property Name="link" Type="nvarchar(max)" />
-          <Property Name="meta" Type="nvarchar" MaxLength="50" />
-          <Property Name="hide" Type="bit" />
-          <Property Name="order" Type="int" />
-          <Property Name="datebegin" Type="smalldatetime" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="newstable">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="nvarchar" MaxLength="50" />
-          <Property Name="link" Type="nvarchar(max)" />
-          <Property Name="meta" Type="nvarchar" MaxLength="50" />
-          <Property Name="hide" Type="bit" />
-          <Property Name="order" Type="int" />
-          <Property Name="datebegin" Type="smalldatetime" />
-        </EntityType>
         <EntityType Name="readertable">
           <Key>
             <PropertyRef Name="id" />
@@ -133,31 +105,8 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
           <EntitySet Name="cardtable_use" EntityType="Self.cardtable_use" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="cardtable_wands" EntityType="Self.cardtable_wands" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="readertable" EntityType="Self.readertable" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="menutable" EntityType="Self.menutable" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [menutable].[id] AS [id], 
-    [menutable].[name] AS [name], 
-    [menutable].[link] AS [link], 
-    [menutable].[meta] AS [meta], 
-    [menutable].[hide] AS [hide], 
-    [menutable].[order] AS [order], 
-    [menutable].[datebegin] AS [datebegin]
-    FROM [dbo].[menutable] AS [menutable]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="newstable" EntityType="Self.newstable" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [newstable].[id] AS [id], 
-    [newstable].[name] AS [name], 
-    [newstable].[link] AS [link], 
-    [newstable].[meta] AS [meta], 
-    [newstable].[hide] AS [hide], 
-    [newstable].[order] AS [order], 
-    [newstable].[datebegin] AS [datebegin]
-    FROM [dbo].[newstable] AS [newstable]</DefiningQuery>
-          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TAROTWEBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -253,30 +202,6 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
           <Property Name="detail_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="detail_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="menutable">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="hide" Type="Boolean" />
-          <Property Name="order" Type="Int32" />
-          <Property Name="datebegin" Type="DateTime" Precision="0" />
-        </EntityType>
-        <EntityType Name="newstable">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="hide" Type="Boolean" />
-          <Property Name="order" Type="Int32" />
-          <Property Name="datebegin" Type="DateTime" Precision="0" />
-        </EntityType>
         <EntityContainer Name="TAROTWEBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="cardtables" EntityType="Self.cardtable" />
           <EntitySet Name="cardtable_cups" EntityType="Self.cardtable_cups" />
@@ -285,8 +210,6 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
           <EntitySet Name="cardtable_use" EntityType="Self.cardtable_use" />
           <EntitySet Name="cardtable_wands" EntityType="Self.cardtable_wands" />
           <EntitySet Name="readertables" EntityType="Self.readertable" />
-          <EntitySet Name="menutables" EntityType="Self.menutable" />
-          <EntitySet Name="newstables" EntityType="Self.newstable" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -390,32 +313,6 @@ warning 6002: The table/view 'TAROTWEB.dbo.newstable' does not have a primary ke
                 <ScalarProperty Name="detail_2" ColumnName="detail_2" />
                 <ScalarProperty Name="detail_3" ColumnName="detail_3" />
                 <ScalarProperty Name="detail_4" ColumnName="detail_4" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="menutables">
-            <EntityTypeMapping TypeName="TAROTWEBModel.menutable">
-              <MappingFragment StoreEntitySet="menutable">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="link" ColumnName="link" />
-                <ScalarProperty Name="meta" ColumnName="meta" />
-                <ScalarProperty Name="hide" ColumnName="hide" />
-                <ScalarProperty Name="order" ColumnName="order" />
-                <ScalarProperty Name="datebegin" ColumnName="datebegin" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="newstables">
-            <EntityTypeMapping TypeName="TAROTWEBModel.newstable">
-              <MappingFragment StoreEntitySet="newstable">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="link" ColumnName="link" />
-                <ScalarProperty Name="meta" ColumnName="meta" />
-                <ScalarProperty Name="hide" ColumnName="hide" />
-                <ScalarProperty Name="order" ColumnName="order" />
-                <ScalarProperty Name="datebegin" ColumnName="datebegin" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

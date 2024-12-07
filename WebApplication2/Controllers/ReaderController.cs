@@ -10,6 +10,7 @@ namespace WebApplication2.Controllers
     public class ReaderController : Controller
     {
         TAROTWEBEntities1 _db = new TAROTWEBEntities1();
+
         // GET: Reader
         public ActionResult Readers()
         {
@@ -17,10 +18,22 @@ namespace WebApplication2.Controllers
                     select t;
             return View(v.ToList());
         }
-        public ActionResult getInfo(int id)
+
+        
+        // Modify this action to accept 'name' from the URL
+        public ActionResult getInfo(string name)
         {
-            var v = _db.readertables.FirstOrDefault(r => r.id == id);
-            return View(v);
+            name = name.Replace("-", " ");
+            // Find the reader by 'name'
+            var reader = _db.readertables.FirstOrDefault(r => r.name == name);
+            
+            if (reader == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(reader);  // Return the reader details view
         }
     }
+
 }

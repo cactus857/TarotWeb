@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml.Linq;
 using WebApplication2.Models;
 
 namespace WebApplication2.Areas.Admin.Controllers
@@ -15,6 +16,8 @@ namespace WebApplication2.Areas.Admin.Controllers
         TAROTWEBEntities1 _db = new TAROTWEBEntities1();
         public ActionResult CardP()
         {
+
+
             var v = from t in _db.cardtable_pentacles
                     select t;
             return View(v.ToList());
@@ -64,6 +67,7 @@ namespace WebApplication2.Areas.Admin.Controllers
         }
         public ActionResult Edit(int id)
         {
+            
             cardtable_pentacles ct = _db.cardtable_pentacles.Find(id);
             return View(ct);
         }

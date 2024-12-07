@@ -62,17 +62,32 @@ namespace WebApplication2.Areas.Admin.Controllers
 
             return View(ct);
         }
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string name)
         {
-            cardtable ct = _db.cardtables.Find(id);
-            return View(ct);
+            // Replace hyphens with spaces to match the format stored in the database (if needed)
+            name = name.Replace("-", " ");
+
+            var card = _db.cardtables.FirstOrDefault(c => c.name.ToLower() == name.ToLower());
+
+            if (card == null)
+            {
+                return HttpNotFound(); // If no card is found, return 404
+            }
+
+            return View(card); // Pass the card to the view
         }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
         public ActionResult Edit(cardtable ct, HttpPostedFileBase link)
         {
             cardtable cte = _db.cardtables.Find(ct.id);
+       
+     
+      
+
 
             //cte.link = ct.link;
             try
@@ -115,12 +130,20 @@ namespace WebApplication2.Areas.Admin.Controllers
             return View(ct);
         }
         [HttpPost]
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int id, string name)
         {
-            cardtable ct = _db.cardtables.Find(id);
-            _db.cardtables.Remove(ct);
+            name = name.Replace("-", " "); // Convert hyphens back to spaces
+            var card = _db.cardtables.FirstOrDefault(c => c.id == id);
+
+            if (card == null)
+            {
+                return HttpNotFound();
+            }
+
+            _db.cardtables.Remove(card);
             _db.SaveChanges();
-            return RedirectToAction("CardG");
+
+            return RedirectToAction("Index");
         }
     }
 }

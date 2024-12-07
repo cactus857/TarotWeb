@@ -4,6 +4,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
+
 <section class="team_section layout_padding">
     <div class="container">
         <div class="heading_container heading_center" style="color: white">
@@ -16,29 +18,36 @@
             </p>
         </div>
         <div class="row">
-            @foreach (var item in Model)
+            @if (!Model.Any())
             {
-                <div class="col-md-4 col-sm-6 mx-auto ">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="~/Content/images/@item.img" alt="" width="200" height="500">
+                <p style="color: white;">No readers found at the moment.</p>
+            }
+            else
+            {
+                foreach (var item in Model)
+                {
+                    <div class="col-md-4 col-sm-6 mx-auto">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="@Url.Content($"~/Content/images/{item.img}")" alt="@item.name" width="200" height="500">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    @item.name
+                                </h5>
+                                <h6 class="">
+                                    @item.position
+                                </h6>
+                                <div class="btn-box">
+                                    <a href="@Url.Action("getInfo", "Reader", new { name = item.name.Replace(" ", "-").ToLower() })">Xem thêm</a>
 
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                @item.name
-                            </h5>
-                            <h6 class="">
-                                @item.position
-                            </h6>
-                            <div class="btn-box">
-                                @Html.ActionLink("Xem thêm", "GetInfo", new { id = @item.id })
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                }
             }
-          
         </div>
+    </div>
 </section>
-

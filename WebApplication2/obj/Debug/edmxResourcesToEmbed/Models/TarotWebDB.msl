@@ -100,31 +100,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="menutables">
-      <EntityTypeMapping TypeName="TAROTWEBModel.menutable">
-        <MappingFragment StoreEntitySet="menutable">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="link" ColumnName="link" />
-          <ScalarProperty Name="meta" ColumnName="meta" />
-          <ScalarProperty Name="hide" ColumnName="hide" />
-          <ScalarProperty Name="order" ColumnName="order" />
-          <ScalarProperty Name="datebegin" ColumnName="datebegin" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="newstables">
-      <EntityTypeMapping TypeName="TAROTWEBModel.newstable">
-        <MappingFragment StoreEntitySet="newstable">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="link" ColumnName="link" />
-          <ScalarProperty Name="meta" ColumnName="meta" />
-          <ScalarProperty Name="hide" ColumnName="hide" />
-          <ScalarProperty Name="order" ColumnName="order" />
-          <ScalarProperty Name="datebegin" ColumnName="datebegin" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

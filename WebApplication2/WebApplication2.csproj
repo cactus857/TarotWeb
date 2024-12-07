@@ -262,6 +262,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\SlugHelper.cs" />
     <Compile Include="Models\CardsModel.cs" />
     <Compile Include="Models\cardtable.cs">
       <DependentUpon>TarotWebDB.tt</DependentUpon>
@@ -279,12 +280,6 @@
       <DependentUpon>TarotWebDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\cardtable_wands.cs">
-      <DependentUpon>TarotWebDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\menutable.cs">
-      <DependentUpon>TarotWebDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\newstable.cs">
       <DependentUpon>TarotWebDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\readertable.cs">
@@ -3781,9 +3776,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Menu\getMenu.cshtml" />
     <Content Include="Views\Menu\Contact.cshtml" />
     <Content Include="Views\Menu\About.cshtml" />

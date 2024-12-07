@@ -92,30 +92,6 @@
     <Property Name="detail_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="detail_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="menutable">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="hide" Type="Boolean" />
-    <Property Name="order" Type="Int32" />
-    <Property Name="datebegin" Type="DateTime" Precision="0" />
-  </EntityType>
-  <EntityType Name="newstable">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="hide" Type="Boolean" />
-    <Property Name="order" Type="Int32" />
-    <Property Name="datebegin" Type="DateTime" Precision="0" />
-  </EntityType>
   <EntityContainer Name="TAROTWEBEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="cardtables" EntityType="Self.cardtable" />
     <EntitySet Name="cardtable_cups" EntityType="Self.cardtable_cups" />
@@ -124,7 +100,5 @@
     <EntitySet Name="cardtable_use" EntityType="Self.cardtable_use" />
     <EntitySet Name="cardtable_wands" EntityType="Self.cardtable_wands" />
     <EntitySet Name="readertables" EntityType="Self.readertable" />
-    <EntitySet Name="menutables" EntityType="Self.menutable" />
-    <EntitySet Name="newstables" EntityType="Self.newstable" />
   </EntityContainer>
 </Schema>

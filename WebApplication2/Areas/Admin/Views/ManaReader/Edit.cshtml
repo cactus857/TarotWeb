@@ -51,8 +51,10 @@
                 <input type="file" name="img" id="img" accept=".jpg,.png,.gif,.jpeg,.bmp" onchange="previewImage(event)" />
 
                 @Html.ValidationMessageFor(model => model.img, "", new { @class = "text-danger" })
-                <img id="preview" src="#" alt="Chọn hình ảnh"
-                     style="float: right; max-width: 150px; max-height: 150px; width: auto; height: auto; display: none;" />
+            <img id="preview"
+                 src="~/Content/images/@Model.img"
+                 alt="Chọn hình ảnh"
+                 style="float: right; max-width: 150px; max-height: 150px; width: auto; height: auto; display: block;" />
             </div>
         </div>
 
